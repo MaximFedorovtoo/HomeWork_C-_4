@@ -14,7 +14,7 @@ void SumInNumb(int numb)
         var[i] = int.Parse(remake[i].ToString());
         result = result + var[i];
     }
-    Console.WriteLine(result);
+    Console.WriteLine($"{numb} -> {result}");
 }
 int EnterNumb(string text)
 {
