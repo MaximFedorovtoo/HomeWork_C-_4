@@ -3,16 +3,22 @@
 //6, 1, 33 -> [6, 1, 33]
 void WriteArray (int [] array)
 {
+    Console.Write("[");
     for( int i =0; i < array.Length; i++ )
     {
-        Console.Write($"{array[i]}, ");
+        if((array.Length - 1) > i )
+        {
+            Console.Write($"{array[i]}, ");
+        }
+        else{Console.Write($"{array[i]}");}
     }
+    Console.Write("]");
 }
 int [] AddArray(int [] array)
 {
     for( int i =0; i < array.Length; i++ )
     {
-        Console.WriteLine($"Введите {i}-й элемент массива: ");
+        Console.Write($"Введите {i}-й элемент массива: ");
         array[i] = int.Parse(Console.ReadLine());
     }
     return array;
